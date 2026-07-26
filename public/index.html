@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MC AFK Bot v3 - Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🤖 MC AFK Bot v3</h1>
+            <p class="subtitle">Minecraft 1.21.11 AFK Bot Dashboard</p>
+        </header>
+
+        <div class="status-section">
+            <div class="status-box">
+                <h2>📊 Trạng thái Bot</h2>
+                <div class="status-item">
+                    <span>Kết nối:</span>
+                    <span class="status-badge" id="connectionStatus">❌ Ngắt</span>
+                </div>
+                <div class="status-item">
+                    <span>Username:</span>
+                    <span id="botUsername">-</span>
+                </div>
+                <div class="status-item">
+                    <span>❤️ Health:</span>
+                    <span id="health">-</span>
+                </div>
+                <div class="status-item">
+                    <span>🍗 Hunger:</span>
+                    <span id="hunger">-</span>
+                </div>
+                <div class="status-item">
+                    <span>📍 Vị trí:</span>
+                    <span id="position">-</span>
+                </div>
+                <div class="status-item">
+                    <span>🌍 Dimension:</span>
+                    <span id="dimension">-</span>
+                </div>
+                <div class="status-item">
+                    <span>🔄 AFK Mode:</span>
+                    <span class="afk-badge" id="afkStatus">OFF</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="control-section">
+            <div class="control-box">
+                <h2>⚡ Điều khiển</h2>
+
+                <div class="control-group">
+                    <label>💬 Gửi tin nhắn chat:</label>
+                    <div class="input-group">
+                        <input type="text" id="chatInput" placeholder="Nhập tin nhắn..." />
+                        <button onclick="sendChat()">Gửi</button>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label>⚙️ Thực hiện lệnh:</label>
+                    <div class="input-group">
+                        <input type="text" id="commandInput" placeholder="Ví dụ: /say Hello" />
+                        <button onclick="sendCommand()">Thực hiện</button>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label>🔄 AFK Mode:</label>
+                    <button id="afkToggle" class="btn-secondary" onclick="toggleAFK()">Bật AFK</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-section">
+            <div class="chat-box">
+                <h2>💬 Lịch sử Chat</h2>
+                <div class="chat-history" id="chatHistory">
+                    <p class="empty">Chưa có tin nhắn</p>
+                </div>
+                <button onclick="clearChat()" class="btn-clear">Xóa lịch sử</button>
+            </div>
+        </div>
+
+        <div class="logs-section">
+            <div class="logs-box">
+                <h2>📝 Logs</h2>
+                <div class="logs-history" id="logsHistory">
+                    <p class="empty">Chưa có logs</p>
+                </div>
+                <button onclick="clearLogs()" class="btn-clear">Xóa logs</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+{
+  "name": "mc-afk-botv3",
+  "version": "1.0.0",
+  "description": "Minecraft 1.21.11 AFK Bot with Web Dashboard",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:bot\" \"npm run dev:server\"",
+    "dev:bot": "ts-node src/bot/index.ts",
+    "dev:server": "ts-node src/server/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "start:server": "node dist/server/index.js"
+  },
+  "dependencies": {
+    "mineflayer": "^4.14.1",
+    "express": "^4.18.2",
+    "ws": "^8.14.2",
+    "dotenv": "^16.3.1",
+    "cors": "^2.8.5",
+    "axios": "^1.6.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.6",
+    "@types/express": "^4.17.21",
+    "typescript": "^5.3.3",
+    "ts-node": "^10.9.2",
+    "concurrently": "^8.2.2"
+  }
+}
